@@ -1,4 +1,8 @@
+import 'package:coffee_shop/pages/cart.dart';
+import 'package:coffee_shop/pages/catalog.dart';
+import 'package:coffee_shop/pages/profile.dart';
 import 'package:flutter/material.dart';
+import 'coffee_manager.dart';
 
 void main() {
   runApp(const CoffeeShopApp());
@@ -30,39 +34,44 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  var manager = CoffeeManager();
+  int index = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  Widget navigateToPage() {
+    switch (index) {
+      case 0:
+        return const CatalogPage();
+      case 1:
+        return const CartPage();
+      case 2:
+        return const ProfilePage();
+
+      default:
+        return const CatalogPage();
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text('Coffee Shop'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: index,
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Catalog'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.list_alt_rounded), label: 'Cart'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.account_circle_rounded), label: 'Profile'),
           ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+          onTap: (i) {
+            setState(() {
+              index = i;
+            });
+          }),
+      body: navigateToPage()
     );
   }
 }
