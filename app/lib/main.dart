@@ -11,6 +11,8 @@ void main() {
 class CoffeeShopApp extends StatelessWidget {
   const CoffeeShopApp({super.key});
 
+  static var manager = CoffeeManager();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,22 +21,21 @@ class CoffeeShopApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const HomePage(title: 'Coffee Shop'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  var manager = CoffeeManager();
+class _HomePageState extends State<HomePage> {
   int index = 0;
 
   Widget navigateToPage() {
@@ -54,24 +55,23 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Coffee Shop'),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-          currentIndex: index,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Catalog'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.list_alt_rounded), label: 'Cart'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.account_circle_rounded), label: 'Profile'),
-          ],
-          onTap: (i) {
-            setState(() {
-              index = i;
-            });
-          }),
-      body: navigateToPage()
-    );
+        appBar: AppBar(
+          title: const Text('Coffee Shop'),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+            currentIndex: index,
+            items: const [
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Catalog'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.list_alt_rounded), label: 'Cart'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.account_circle_rounded), label: 'Profile'),
+            ],
+            onTap: (i) {
+              setState(() {
+                index = i;
+              });
+            }),
+        body: navigateToPage());
   }
 }

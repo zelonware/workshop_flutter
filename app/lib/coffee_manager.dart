@@ -4,7 +4,7 @@ import 'package:coffee_shop/models/user.dart';
 
 class CoffeeManager {
   final User yourUser = User(
-      name: 'Your awesome name', mail: 'you@awesome.com', phone: '666-666-66');
+      name: 'Awesome', mail: 'you@awesome.com', phone: '666-666-66');
 
   final List<Product> productsInCart = [];
   final List<Order> orders = [];
