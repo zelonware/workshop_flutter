@@ -52,10 +52,10 @@ class _CatalogPageState extends State<CatalogPage> {
     return ListTile(
       leading: const Icon(Icons.coffee),
       title: Text(p.name),
-      subtitle: Text('Price: $price 💶💵'),
+      subtitle: Text('Price: $price 💶'),
       onTap: () => setState(() {
         CoffeeShopApp.manager.addToCart(p);
-        showToast(context);
+        //showToast(context);
       }),
     );
   }

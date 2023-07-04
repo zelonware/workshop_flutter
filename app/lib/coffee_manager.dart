@@ -3,8 +3,8 @@ import 'package:coffee_shop/models/product.dart';
 import 'package:coffee_shop/models/user.dart';
 
 class CoffeeManager {
-  final User yourUser = User(
-      name: 'Awesome', mail: 'you@awesome.com', phone: '666-666-66');
+  final User yourUser =
+      User(name: 'Awesome', mail: 'you@awesome.com', phone: '666-666-66');
 
   final List<Product> productsInCart = [];
   final List<Order> orders = [];
@@ -17,23 +17,28 @@ class CoffeeManager {
   }
 
   void calculateTotal() {
-    var prices = productsInCart.map((e) => e.price).toList();
-    total = prices.reduce((value, element) => value + element);
+    if (productsInCart.isNotEmpty) {
+      var prices = productsInCart.map((e) => e.price).toList();
+      total = prices.reduce((value, element) => value + element);
+    } else {
+      total = 0;
+    }
   }
 
   void makeOrder() {
-    int howManyProducts = productsInCart.length;
+    if (productsInCart.isNotEmpty) {
+      int howManyProducts = productsInCart.length;
 
-    var newOrder = Order(
-        products: howManyProducts,
-        total: total,
-        orderedAt: DateTime.now());
-    orders.add(newOrder);
+      var newOrder = Order(
+          products: howManyProducts, total: total, orderedAt: DateTime.now());
+      orders.add(newOrder);
 
-    clearCart();
+      clearCart();
+    }
   }
 
   void clearCart() {
     productsInCart.clear();
+    calculateTotal();
   }
 }

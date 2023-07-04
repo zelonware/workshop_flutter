@@ -15,6 +15,7 @@ class CoffeeShopApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsFlutterBinding.ensureInitialized();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
   int index = 0;
 
   Widget navigateToPage() {
-    switch (index) {
+    switch (  index) {
       case 0:
         return const CatalogPage();
       case 1:
