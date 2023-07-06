@@ -3,7 +3,7 @@ import 'package:coffee_shop/models/product.dart';
 import 'package:coffee_shop/models/user.dart';
 
 class CoffeeManager {
-  final User yourUser =
+  final User user =
       User(name: 'Awesome', mail: 'you@awesome.com', phone: '666-666-66');
 
   final List<Product> productsInCart = [];

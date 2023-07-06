@@ -11,7 +11,7 @@ class CatalogPage extends StatefulWidget {
 }
 
 class _CatalogPageState extends State<CatalogPage> {
-  String username = CoffeeShopApp.manager.yourUser.name;
+  String username = CoffeeShopApp.manager.user.name;
 
   @override
   Widget build(BuildContext context) {

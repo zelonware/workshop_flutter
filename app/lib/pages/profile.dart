@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:coffee_shop/main.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -10,6 +11,55 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return const Text('Your profile');
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            margin: const EdgeInsets.all(20),
+            child: const CircleAvatar(
+              radius: 50,
+              backgroundColor: Colors.black,
+              backgroundImage: NetworkImage(
+                  'https://jkpsports.com/wp-content/uploads/2019/11/profile-image-placeholder1.png'),
+            ),
+          ),
+          Text(CoffeeShopApp.manager.user.name),
+          Container(
+            margin: const EdgeInsets.all(10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Mail'),
+                const SizedBox(
+                  height: 0,
+                  width: 20,
+                ),
+                Text(CoffeeShopApp.manager.user.mail)
+              ],
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.all(10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Phone'),
+                const SizedBox(
+                  height: 0,
+                  width: 20,
+                ),
+                Text(CoffeeShopApp.manager.user.phone)
+              ],
+            ),
+          ),
+          TextButton(
+              onPressed: () {},
+              style: ButtonStyle(
+                foregroundColor: MaterialStateProperty.all(Colors.white),
+                backgroundColor: MaterialStateProperty.all(Colors.lightBlue),
+              ),
+              child: const Text('All orders'))
+        ]);
   }
 }
