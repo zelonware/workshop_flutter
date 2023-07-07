@@ -1,3 +1,4 @@
+import 'package:coffee_shop/pages/orders.dart';
 import 'package:flutter/material.dart';
 import 'package:coffee_shop/main.dart';
 
@@ -53,13 +54,20 @@ class _ProfilePageState extends State<ProfilePage> {
               ],
             ),
           ),
-          TextButton(
-              onPressed: () {},
-              style: ButtonStyle(
-                foregroundColor: MaterialStateProperty.all(Colors.white),
-                backgroundColor: MaterialStateProperty.all(Colors.lightBlue),
-              ),
-              child: const Text('All orders'))
+          if (CoffeeShopApp.manager.orders.isNotEmpty)
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => OrdersPage(
+                              orders: CoffeeShopApp.manager.orders)));
+                },
+                style: ButtonStyle(
+                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                  backgroundColor: MaterialStateProperty.all(Colors.lightBlue),
+                ),
+                child: const Text('All orders'))
         ]);
   }
 }
