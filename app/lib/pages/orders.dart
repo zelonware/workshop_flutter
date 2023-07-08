@@ -5,7 +5,7 @@ import '../models/order.dart';
 
 class OrdersPage extends StatelessWidget {
   final List<Order> orders;
-  DateFormat formatter = DateFormat('dd-MM-yyyy (HH:mm)');
+  final DateFormat formatter = DateFormat('dd-MM-yyyy (HH:mm)');
 
   OrdersPage({super.key, required this.orders});
 
