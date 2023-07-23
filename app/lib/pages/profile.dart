@@ -29,13 +29,9 @@ class _ProfilePageState extends State<ProfilePage> {
           Container(
             margin: const EdgeInsets.all(10),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 const Text('Mail'),
-                const SizedBox(
-                  height: 0,
-                  width: 20,
-                ),
                 Text(CoffeeShopApp.manager.user.mail)
               ],
             ),
@@ -43,13 +39,9 @@ class _ProfilePageState extends State<ProfilePage> {
           Container(
             margin: const EdgeInsets.all(10),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 const Text('Phone'),
-                const SizedBox(
-                  height: 0,
-                  width: 20,
-                ),
                 Text(CoffeeShopApp.manager.user.phone)
               ],
             ),

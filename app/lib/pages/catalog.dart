@@ -20,19 +20,16 @@ class _CatalogPageState extends State<CatalogPage> {
         const SizedBox(
           height: 10,
         ),
-        Text(
-          'Hello there, $username!',
-          style: const TextStyle(fontSize: 20),
-        ),
-        const SizedBox(
-          height: 10,
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            'Hello there, $username!',
+            style: const TextStyle(fontSize: 20),
+          ),
         ),
         const Text(
           'Choose your coffee(s):',
           style: TextStyle(fontSize: 15),
-        ),
-        const SizedBox(
-          height: 15,
         ),
         Expanded(
             child: Column(
@@ -55,7 +52,6 @@ class _CatalogPageState extends State<CatalogPage> {
       subtitle: Text('Price: $price 💶'),
       onTap: () => setState(() {
         CoffeeShopApp.manager.addToCart(p);
-        //showToast(context);
       }),
     );
   }

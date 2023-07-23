@@ -20,17 +20,21 @@ class OrdersPage extends StatelessWidget {
                 itemCount: orders.length,
                 itemBuilder: (context, index) {
                   return Container(
-                      color: Colors.blueGrey,
+                      decoration: BoxDecoration(
+                          color: Colors.lightBlueAccent,
+                          borderRadius: BorderRadius.circular(10)),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 16, horizontal: 0),
                       margin: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 10),
                       child: Column(
                         children: [
                           Text(
                               '${orders[index].products} products for ${orders[index].total} 💶',
-                              style: const TextStyle(color: Colors.white)),
+                              style: const TextStyle(color: Colors.black)),
                           Text(
                               'Ordered at ${formatter.format(orders[index].orderedAt)}',
-                              style: const TextStyle(color: Colors.white)),
+                              style: const TextStyle(color: Colors.black)),
                         ],
                       ));
                 })));
