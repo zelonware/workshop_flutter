@@ -13,10 +13,10 @@ class CoffeeManager {
 
   void addToCart(Product product) {
     productsInCart.add(product);
-    calculateTotal();
+    _calculateTotal();
   }
 
-  void calculateTotal() {
+  void _calculateTotal() {
     if (productsInCart.isNotEmpty) {
       var prices = productsInCart.map((e) => e.price).toList();
       total = prices.reduce((value, element) => value + element);
@@ -39,6 +39,6 @@ class CoffeeManager {
 
   void clearCart() {
     productsInCart.clear();
-    calculateTotal();
+    _calculateTotal();
   }
 }

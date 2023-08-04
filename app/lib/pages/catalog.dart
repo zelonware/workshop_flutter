@@ -1,7 +1,7 @@
 import 'package:coffee_shop/main.dart';
-import 'package:flutter/material.dart';
+import 'package:coffee_shop/models/product.dart';
 
-import '../models/product.dart';
+import 'package:flutter/material.dart';
 
 class CatalogPage extends StatefulWidget {
   const CatalogPage({super.key});

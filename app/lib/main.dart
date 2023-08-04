@@ -1,8 +1,9 @@
 import 'package:coffee_shop/pages/cart.dart';
 import 'package:coffee_shop/pages/catalog.dart';
 import 'package:coffee_shop/pages/profile.dart';
+import 'package:coffee_shop/coffee_manager.dart';
+
 import 'package:flutter/material.dart';
-import 'coffee_manager.dart';
 
 void main() {
   runApp(const CoffeeShopApp());
@@ -11,7 +12,7 @@ void main() {
 class CoffeeShopApp extends StatelessWidget {
   const CoffeeShopApp({super.key});
 
-  static var manager = CoffeeManager();
+  static final manager = CoffeeManager();
 
   @override
   Widget build(BuildContext context) {
@@ -40,9 +41,7 @@ class _HomePageState extends State<HomePage> {
   int index = 0;
 
   Widget navigateToPage() {
-    switch (  index) {
-      case 0:
-        return const CatalogPage();
+    switch (index) {
       case 1:
         return const CartPage();
       case 2:

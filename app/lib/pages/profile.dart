@@ -1,6 +1,7 @@
 import 'package:coffee_shop/pages/orders.dart';
-import 'package:flutter/material.dart';
 import 'package:coffee_shop/main.dart';
+
+import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
