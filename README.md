@@ -2,6 +2,8 @@
 
 Let's create an app with Flutter!
 
+[![Flutter CI](https://github.com/Beelzenef/workshop_flutter/actions/workflows/dart.yaml/badge.svg)](https://github.com/Beelzenef/workshop_flutter/actions/workflows/dart.yaml)
+
 ## Requirements:
 
 ### Required:
