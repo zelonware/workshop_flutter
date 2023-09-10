@@ -17,7 +17,7 @@ To choose:
 - Android Studio
 - Visual Studio Code
 
-> ⚠️ Note: Visual Studio is different than Visual Studio Code.
+> ⚠️ NOTE - Visual Studio is different than Visual Studio Code
 
 ### Optional
 
@@ -30,7 +30,7 @@ To choose:
 
 ## Hands on lab
 
-Clone this repo and checkout to `workshop` branch.
+Clone this repo and checkout to [`workshop`](https://github.com/Beelzenef/workshop_flutter/tree/workshop) branch.
 
 ## More info
 
