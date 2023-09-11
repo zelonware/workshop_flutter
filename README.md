@@ -4,6 +4,10 @@ Let's create an app with Flutter!
 
 [![Flutter CI](https://github.com/Beelzenef/workshop_flutter/actions/workflows/dart.yaml/badge.svg)](https://github.com/Beelzenef/workshop_flutter/actions/workflows/dart.yaml)
 
+CoffeShop app preview:
+
+![Four screenshots for different screens in the app: product catalog, cart, user profile and order history](./imgs/workshop_preview.png)
+
 ## Requirements:
 
 ### Required:
