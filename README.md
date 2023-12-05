@@ -4,7 +4,7 @@ Let's create an app with Flutter!
 
 [![Flutter CI](https://github.com/Beelzenef/workshop_flutter/actions/workflows/dart.yaml/badge.svg)](https://github.com/Beelzenef/workshop_flutter/actions/workflows/dart.yaml)
 
-CoffeShop app preview:
+CoffeeShop app preview:
 
 ![Four screenshots for different screens in the app: product catalog, cart, user profile and order history](./imgs/workshop_preview.png)
 
@@ -29,6 +29,16 @@ To choose:
 
 - Android emulator device
 - Physical device (developer mode and USB debugging enabled)
+
+## About code:
+
+No state management libraries/tools/engines are used.
+
+No best practices with Flutter are used.
+
+This is a beginner level project.
+
+This workshop focuses on the development of UI, to learn the basics of Flutter, widgets, navigation between views, Dart first steps...
 
 ---
 
