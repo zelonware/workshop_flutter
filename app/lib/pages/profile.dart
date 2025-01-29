@@ -57,8 +57,8 @@ class _ProfilePageState extends State<ProfilePage> {
                               orders: CoffeeShopApp.manager.orders)));
                 },
                 style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
-                  backgroundColor: MaterialStateProperty.all(Colors.lightBlue),
+                  foregroundColor: WidgetStateProperty.all(Colors.white),
+                  backgroundColor: WidgetStateProperty.all(Colors.lightBlue),
                 ),
                 child: const Text('All orders'))
         ]);

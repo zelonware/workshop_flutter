@@ -64,8 +64,8 @@ class _CartPageState extends State<CartPage> {
           children: [
             TextButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.lightGreen),
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                  backgroundColor: WidgetStateProperty.all(Colors.lightGreen),
+                  foregroundColor: WidgetStateProperty.all(Colors.white),
                 ),
                 onPressed: () => setState(() {
                       CoffeeShopApp.manager.makeOrder();
@@ -73,8 +73,8 @@ class _CartPageState extends State<CartPage> {
                 child: const Text('PAY')),
             TextButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.red),
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                  backgroundColor: WidgetStateProperty.all(Colors.red),
+                  foregroundColor: WidgetStateProperty.all(Colors.white),
                 ),
                 onPressed: () => setState(() {
                       CoffeeShopApp.manager.clearCart();
